@@ -1,3 +1,129 @@
 @import "normalize.styl"
-h1
-	color green
+@import "fonts.styl"
+
+gris_oscuro= #333333
+gris_claro = #818181
+rojo = #BD255B
+a 
+	text-decoration none
+body 
+	font-family 'Varela Round',sans-serif
+	font-size 16px
+figure
+	margin 0
+img 
+	vertical-align top
+.actions
+	background rgba(black,.3)
+	position absolute
+	bottom 0	
+	left 0
+	right 0
+
+.action
+	color white
+	font-size 1.2em
+	margin-right 0.5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_oscuro
+
+.author
+	color gris_claro
+
+.border-bottom 
+	border-bottom 1px solid gris_claro
+
+.button-menu
+	color gris_oscuro
+	left .5em
+	margin-top -10px //la mitad de la fuente
+	position absolute
+	top 50%
+
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.container
+	padding 1.4rem
+	font-size 0
+	text-align center
+
+.header
+	height 3.5em	
+	
+	.title
+		font-size 1.1em
+		text-align center
+		margin 0
+		line-height 3.5em
+.name
+	color gris_oscuro
+.menu
+	display none
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.playing
+	&.small
+		width 20em // 320/16 -> 20 em 
+
+.progress
+	margin 1em 0
+	position relative
+	.circle
+		background gris_oscuro
+		border-radius 50%
+		height 10px
+		position absolute
+		top -2px
+		right 0
+		width 10px
+	.min
+	.max
+		color gris_claro
+		font-size .8em
+		position absolute
+		top -5px
+	.min		
+		left 0
+	.max 		
+		right 0
+	.state
+		background rojo
+		border-radius 5px
+		height 5px	
+		position relative	
+		width 30%	
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	
+
+		
+
+.relative 
+	position relative
+.right-text
+	text-align right
+
+.song
+	display inline-block
+	font-size 1rem
+	margin-right 1em
+	margin-bottom 1em
+	text-align left
+	width 8rem
+
+	&:nth-child(even)
+		margin-right 0
+
+	p
+		margin .5em 0
+	
