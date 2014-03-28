@@ -67,7 +67,7 @@ img
 	padding 1em
 .padding-tb
 	padding 1em 0
-.playing
+.playing	
 	&.small
 		width 20em // 320/16 -> 20 em 
 
@@ -106,8 +106,6 @@ img
 		width 75%
 	
 
-		
-
 .relative 
 	position relative
 .right-text
@@ -127,3 +125,31 @@ img
 	p
 		margin .5em 0
 	
+//mediaqueries
+//tablet
+@media screen and (min-width:480px) 	
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			height auto
+			width 100%
+	.playing	
+		&.medium
+			width auto
+
+//desktop
+@media screen and (min-width:1000px)
+	.button-menu
+		display none
+
+	.isotipo
+		width 122px
+			
+	.header
+		height auto
+		.title
+			display none
+	.logo
+		padding 1.3em 0
