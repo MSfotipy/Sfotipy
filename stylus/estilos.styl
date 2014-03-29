@@ -4,15 +4,22 @@
 gris_oscuro= #333333
 gris_claro = #818181
 rojo = #BD255B
+gris_mas_claro = #F0F0F0
 a 
 	text-decoration none
 body 
 	font-family 'Varela Round',sans-serif
 	font-size 16px
+
 figure
 	margin 0
+
 img 
 	vertical-align top
+ul
+	margin 0
+	padding 0
+
 .actions
 	background rgba(black,.3)
 	position absolute
@@ -31,6 +38,10 @@ img
 
 .author
 	color gris_claro
+	
+.avatar	
+	height 38px
+	width 38px
 
 .border-bottom 
 	border-bottom 1px solid gris_claro
@@ -46,30 +57,66 @@ img
 	margin 0 auto
 .center-text
 	text-align center
+
 .container
 	padding 1.4rem
 	font-size 0
 	text-align center
 
-.header
-	height 3.5em	
+.close-icon
+	color gris_claro
+	font-size 1.2em
+	position absolute
+	top .5em
+	right .5em
+
 	
+.header
+	height 3.5em		
 	.title
 		font-size 1.1em
 		text-align center
 		margin 0
 		line-height 3.5em
-.name
-	color gris_oscuro
+.input
+	border 1px solid gris_claro
+	border-radius 5px
+	height 2.5em
+	padding 0 1em 0 2em
+.isotipo
+	width 122px
+.left
+	float left
+.logo 
+	background white
+	display none
+	padding 1.3em 0
+	overflow hidden
 .menu
 	display none
+.name
+	color gris_oscuro
 .padding
 	padding 1em
 .padding-tb
 	padding 1em 0
+.playlist
+	display none	
+	border-left 1px solid gris_claro	
+	padding 0 2em
+	width 22em
+	.action
+		font-size .8em
+	.item			
+		padding 1em 0
+	.list	
+			
+		list-style none
+							
 .playing	
 	&.small
 		width 20em // 320/16 -> 20 em 
+		margin 0 auto
 
 .progress
 	margin 1em 0
@@ -105,12 +152,23 @@ img
 		margin 0 auto
 		width 75%
 	
-
 .relative 
 	position relative
+
+.right
+	float right
+
 .right-text
 	text-align right
-
+.round
+	border-radius 50%
+	overflow hidden
+.search-icon
+	position absolute
+	left .5em
+	top .8em
+	color gris_claro	
+	
 .song
 	display inline-block
 	font-size 1rem
@@ -124,6 +182,21 @@ img
 
 	p
 		margin .5em 0
+
+.username
+	color gris_claro
+	margin-left .5em
+	position relative
+	top 9px		
+	&:after
+		border-left 7px solid transparent
+		border-top 7px solid gris_claro
+		border-right 7px solid transparent			
+		content ""
+		display inline-block
+		margin-left .4em
+.wrap
+	width 1000px
 	
 //mediaqueries
 //tablet
@@ -141,15 +214,48 @@ img
 
 //desktop
 @media screen and (min-width:1000px)
+	body
+		background gris_mas_claro		
 	.button-menu
 		display none
-
-	.isotipo
-		width 122px
 			
 	.header
+		border none
 		height auto
 		.title
 			display none
+	
+	.playing
+		padding-top 1.3em
+		&.large
+			margin 0 auto
+			overflow hidden
+			width 62.5em					
+	.playlist
+		display block
+	.menu
+		border-top 1px solid gris_claro
+		background gris_mas_claro
+		display block
+		overflow hidden
+		.item
+			float left
+			list-style none			
+			a
+				color gris_oscuro				
+				display block
+				text-transform uppercase
+				cursor pointer
+				padding 1em
+				border-top 5px solid transparent
+				&:hover
+					border-top 5px solid gris_claro
+
+	.music
+		width 32.5em
+		float left	
+		.description
+			display none
+				
 	.logo
-		padding 1.3em 0
+		display block
